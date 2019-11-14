@@ -11,7 +11,6 @@ function onLocationFound(e) {
 
     L.marker(e.latlng).addTo(map)
         .bindPopup("You are within " + radius + " meters from this point").openPopup();
-
     L.circle(e.latlng, radius).addTo(map);
 }
 
@@ -23,10 +22,16 @@ function onLocationError(e) {
 map.on('locationerror', onLocationError);
 
 const toiletimg = L.icon({
+  iconUrl: '/img/markertoilet.png',
+  iconSize: [35, 50],
+  iconAnchor: [0, 0],
+  popupAnchor: [0, 0]
+});
+const toiletplaats = L.icon({
   iconUrl: '/img/marker.png',
   iconSize: [50, 50],
   iconAnchor: [0, 0],
-  popupAnchor: [25, 0]
+  popupAnchor: [0, 0]
 });
 
 
