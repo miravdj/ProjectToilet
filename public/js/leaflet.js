@@ -20,16 +20,32 @@ map.on('locationfound', onLocationFound);
 function onLocationError(e) {
     alert(e.message);
 }
-
 map.on('locationerror', onLocationError);
 
-
-// navigatie
-(function(){
-
-$(".hamburger").on("click", function() {
-	$(this).parent(".hamburger-wrapper").toggleClass("hamburger-active")
-  $('#map').toggleClass("hamburger-active-onmap");
+const toiletimg = L.icon({
+  iconUrl: '/img/marker.png',
+  iconSize: [50, 50],
+  iconAnchor: [0, 0],
+  popupAnchor: [25, 0]
 });
 
-}());
+
+/*$.getJSON("/ap.json", function(json) {
+  const toiletten = json.toiletten;
+  for (var i=0; i<toiletten.length; i++) {
+    new L.marker(toiletten[i].X_COORD, toiletten[i].Y_COORD, {
+        icon: toiletimg
+      }).bindPopup(`
+        <img src="${toiletten[i].marker}" alt="Toilet marker" class="popup-marker">
+        <h1>Campus ${toiletten[i].OMSCHRIJVING}</h1>
+        <h2>${toiletten[i].BETALEND}</h2>
+        <p>
+        ${toiletten[i].STRAAT} ${toiletten[i].number} <br>
+        ${toiletten[i].POSTCODE} ${toiletten[i].city} <br>
+        ${toiletten[i].DISTRICT} <br>
+        </p>
+        `)
+      .addTo(campusMap);
+   }
+}
+})*/
