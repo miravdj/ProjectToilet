@@ -30,8 +30,8 @@ const toiletimg = L.icon({
 const toiletplaats = L.icon({
   iconUrl: '/img/marker.png',
   iconSize: [50, 50],
-  iconAnchor: [20, 20],
-  popupAnchor: [0,0]
+  iconAnchor: [0, 0],
+  popupAnchor: [,0]
 });
 
 

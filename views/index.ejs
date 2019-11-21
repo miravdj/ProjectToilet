@@ -3,16 +3,19 @@
 <main>
   <div id="map"></div>
 </main>
-
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
         integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
         crossorigin=""></script>
 <script src="/js/leaflet.js"></script>
 <script>
   <% for (var i=0; i<toiletten.length; i++) {%>
+    if (true) {
+
+    }
     new L.marker([<%=toiletten[i].geometry.y%>, <%=toiletten[i].geometry.x%>], {
         icon: toiletimg
-      }).bindPopup("<h1>Toilet <%=toiletten[i].attributes.OMSCHRIJVING%></h1><h2>Betalend:  <%=toiletten[i].attributes.BETALEND%></h2><p><%=toiletten[i].attributes.STRAAT%> <%=toiletten[i].attributes.HUISNUMMER%><br><%=toiletten[i].attributes.POSTCODE%> <%=toiletten[i].attributes.DISTRICT%><br></p>").addTo(map);
+      }).bindPopup("<h1>Toilet <%=toiletten[i].attributes.OMSCHRIJVING%></h1><h2 class='<%=toiletten[i].attributes.BETALEND%>'> Betalend:  <%=toiletten[i].attributes.BETALEND%> </h2><p><%=toiletten[i].attributes.STRAAT%> <%=toiletten[i].attributes.HUISNUMMER%><br><%=toiletten[i].attributes.POSTCODE%> <%=toiletten[i].attributes.DISTRICT%><br></p>").addTo(map);
   <% }%>
 
 
