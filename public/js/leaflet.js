@@ -31,7 +31,7 @@ const toiletplaats = L.icon({
   iconUrl: '/img/marker.png',
   iconSize: [50, 50],
   iconAnchor: [0, 0],
-  popupAnchor: [0, 0]
+  popupAnchor: [,0]
 });
 
 
