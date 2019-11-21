@@ -34,6 +34,8 @@ const toiletplaats = L.icon({
   popupAnchor: [,0]
 });
 
+*/
+
 
 /*$.getJSON("/ap.json", function(json) {
   const toiletten = json.toiletten;
