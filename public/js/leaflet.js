@@ -33,7 +33,3 @@ const toiletplaats = L.icon({
   iconAnchor: [0, 0],
   popupAnchor: [,0]
 });
-
-*/
-
-// layergroups
