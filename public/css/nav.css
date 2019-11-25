@@ -7,7 +7,10 @@
 
 /*----LOGO----*/
 .logo{
-  
+  text-align: center;
+  display: block;
+  margin: 0;
+  padding-top: 50px;
 }
 
 
@@ -100,7 +103,7 @@
   text-decoration: none;
   font-size: 14px;
   text-transform: ;
-  text-align: ceter;
+  text-align: ;
   padding: 24px;
   border-bottom: 1px solid #333;
   letter-spacing: 4px;

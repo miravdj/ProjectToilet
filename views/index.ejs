@@ -10,14 +10,51 @@
 <script src="/js/leaflet.js"></script>
 <script>
   <% for (var i=0; i<toiletten.length; i++) {%>
-    if (true) {
-
-    }
-    new L.marker([<%=toiletten[i].geometry.y%>, <%=toiletten[i].geometry.x%>], {
+    let groupBetaling = new Array();
+    let marker = new L.marker([<%=toiletten[i].geometry.y%>, <%=toiletten[i].geometry.x%>], {
         icon: toiletimg
       }).bindPopup("<h1>Toilet <%=toiletten[i].attributes.OMSCHRIJVING%></h1><h2 class='<%=toiletten[i].attributes.BETALEND%>'> Betalend:  <%=toiletten[i].attributes.BETALEND%> </h2><p><%=toiletten[i].attributes.STRAAT%> <%=toiletten[i].attributes.HUISNUMMER%><br><%=toiletten[i].attributes.POSTCODE%> <%=toiletten[i].attributes.DISTRICT%><br></p>").addTo(map);
+//layergroup
+    if (<%=toiletten[i].attributes.BETALEND%> == "ja") {
+      groupBetaling.push(marker);
+    }
+    var betalend = L.layerGroup(groupBetaling);
+//einde layergroup
   <% }%>
 
+//layergroups
+
+// var grayscale = L.tileLayer(mapboxUrl, {id: 'map', attribution: mapboxAttribution}),
+//  streets   = L.tileLayer(mapboxUrl, {id: 'map', attribution: mapboxAttribution});
+
+//var map = L.map('map', {
+//  center: [39.73, -104.99],
+//  zoom: 10,
+//  layers: [grayscale, cities]
+//});
+
+//var baseMaps = {
+//    "<span style='color: gray'>Grayscale</span>": grayscale,
+//    "Streets": streets
+//};
+
+//var overlayMaps = {
+//    "Cities": cities
+//};
+//L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
+//  var overlayMaps = {
+//      "betalend": betalend;
+//  };
+//  L.control.layers(overlayMaps).addTo(map);
+
+//  var map = L.map('map', {
+//      center: [39.73, -104.99],
+//      zoom: 10,
+//      layers: [cities]
+//  });
+//
 
 </script>
    <% include footer %>

@@ -36,6 +36,7 @@ const toiletplaats = L.icon({
 
 */
 
+// layergroups
 
 /*$.getJSON("/ap.json", function(json) {
   const toiletten = json.toiletten;
