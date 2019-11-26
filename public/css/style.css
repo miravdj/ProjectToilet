@@ -18,6 +18,14 @@ main {
   width: 100%;
   height: 100%;
 }
+
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow{
+  background-image: url(/img/locatieicoon.png);
+
+}
+
 #map{
 
   z-index: 10;
