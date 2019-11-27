@@ -3,14 +3,14 @@ var map = L.map('map').fitWorld();
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-/*
+
 const toiletimg = L.icon({
   iconUrl: '/img/markertoilet.png',
   iconSize: [35, 50],
   iconAnchor: [0, 0],
   popupAnchor: [0, 0]
 });
-
+/*
 const toiletplaats = L.icon({
   iconUrl: '/img/locatieicoon.png',
   iconSize: [50, 50],
@@ -20,7 +20,7 @@ const toiletplaats = L.icon({
 */
 
 //icon locatieicoon
-var locatieicoon = L.icon({
+const locatieicoon = L.icon({
     iconUrl: 'img/locatieicoon.png',
     iconSize: [38, 50],
     iconAnchor: [22, 34],
