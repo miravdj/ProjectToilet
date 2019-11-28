@@ -43,16 +43,3 @@ function onLocationError(e) {
     alert(e.message);
 }
 map.on('locationerror', onLocationError);
-
-
-
-// toevoeging van layers
-var littleton = L.marker([, ]);
-
-var man = L.layerGroup([littleton]);
-
-var overlayMaps = {
-    "mannen": man
-};
-
-L.control.layers(overlayMaps).addTo(map);

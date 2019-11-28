@@ -9,22 +9,38 @@
         crossorigin=""></script>
 <script src="/js/leaflet.js"></script>
 <script>
-  <% for (var i=0; i<toiletten.length; i++) {%>
-    let groupBetaling = new Array();
+  // toevoeging van layers
+  var littleton = L.marker([, ]);
 
-    let marker = new L.marker([<%=toiletten[i].geometry.y%>, <%=toiletten[i].geometry.x%>], {
+  var man = L.layerGroup([littleton]);
+
+  var overlayMaps = {
+      "mannen": man
+  };
+  <% for (var i=0; i<toiletten.length; i++) {%>
+    var groupBetaling = new Array();
+
+    marker = new L.marker([<%=toiletten[i].geometry.y%>, <%=toiletten[i].geometry.x%>], {
         icon: toiletimg
       }).bindPopup("<h1>Toilet <%=toiletten[i].attributes.OMSCHRIJVING%></h1><h2 class='<%=toiletten[i].attributes.BETALEND%>'> Betalend:  <%=toiletten[i].attributes.BETALEND%> </h2><p><%=toiletten[i].attributes.STRAAT%> <%=toiletten[i].attributes.HUISNUMMER%><br><%=toiletten[i].attributes.POSTCODE%> <%=toiletten[i].attributes.DISTRICT%><br></p>").addTo(map);
 
 //layergroup (Dit is wat sven schreef als al een onderdeel van de layergroup)
-    if (<%=toiletten[i].attributes.BETALEND%> == "ja") {
-      groupBetaling.push(marker);
-    }
-    var betalend = L.layerGroup(groupBetaling);
+if ("<%=toiletten[i].attributes.BETALEND%>" == "ja") {
+  groupBetaling.push(marker);
+}
+var betalend = L.layerGroup(groupBetaling);
+
 //einde layergroup
 
-
   <% }%>
+  // toevoeging van layers
+
+
+  var overlayMaps = {
+      "mannen": betalend
+  };
+  L.control.layers(overlayMaps).addTo(map);
+
 
 //layergroups
 
