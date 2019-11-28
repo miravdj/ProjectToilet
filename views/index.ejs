@@ -13,6 +13,10 @@
 
   var groupBetaling = new Array();
   var groupGratis = new Array();
+  var alle = new Array();
+  var urinoir = new Array();
+  var luiertafel = new Array();
+  var gehandicapten = new Array();
 
   <% for (var i=0; i<toiletten.length; i++) {%>
     marker = new L.marker([<%=toiletten[i].geometry.y%>, <%=toiletten[i].geometry.x%>], {
@@ -20,13 +24,24 @@
       }).bindPopup("<h1>Toilet <%=toiletten[i].attributes.OMSCHRIJVING%></h1><h2 class='<%=toiletten[i].attributes.BETALEND%>'> Betalend:  <%=toiletten[i].attributes.BETALEND%> </h2><p><%=toiletten[i].attributes.STRAAT%> <%=toiletten[i].attributes.HUISNUMMER%><br><%=toiletten[i].attributes.POSTCODE%> <%=toiletten[i].attributes.DISTRICT%><br></p>").addTo(map);
 
     //layergroup (Dit is wat sven schreef als al een onderdeel van de layergroup)
+    if ("<%=toiletten[i]%>") {
+      alle.push(marker);
+    }
     if ("<%=toiletten[i].attributes.BETALEND%>" == "ja") {
       groupBetaling.push(marker);
     }
-
     if ("<%=toiletten[i].attributes.BETALEND%>" == "nee") {
       groupGratis.push(marker);
     }
+    if ("<%=toiletten[i].attributes.TYPE%>" == "urinoir") {
+      urinoir.push(marker);
+    }
+    if ("<%=toiletten[i].attributes.LUIERTAFEL%>" == "ja") {
+        luiertafel.push(marker);
+      }
+      if ("<%=toiletten[i].attributes.INTEGRAAL_TOEGANKELIJK%>" == "ja") {
+          gehandicapten.push(marker);
+        }
 
 
     //einde layergroup
@@ -36,10 +51,20 @@
   // toevoeging van layers
   var betalend = L.layerGroup(groupBetaling);
   var gratis = L.layerGroup(groupGratis);
+  var alles = L.layerGroup(alle);
+  var urinoires = L.layerGroup(urinoir);
+  var luiertafels = L.layerGroup(luiertafel);
+  var mindervaliden = L.layerGroup(gehandicapten);
+
 
   var overlayMaps = {
+      "Alle toiletten": alles,
       "Betalend": betalend,
-      "Gratis": gratis
+      "Gratis": gratis,
+      "Urinoir": urinoires,
+      "Luiertafel": luiertafels,
+      "Mindervaliden toegankelijk": mindervaliden,
+
   };
   L.control.layers(overlayMaps).addTo(map);
 
