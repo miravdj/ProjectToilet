@@ -26,7 +26,6 @@ const locatieicoon = L.icon({
     iconAnchor: [22, 34],
     popupAnchor: [-3, -76],
 });
-
 map.locate({setView: true, maxZoom: 16});
 
 function onLocationFound(e) {
@@ -36,6 +35,7 @@ function onLocationFound(e) {
         .bindPopup("You are within " + radius + " meters from this point").openPopup();
     L.circle(e.latlng, radius).addTo(map);
 }
+
 
 map.on('locationfound', onLocationFound);
 
