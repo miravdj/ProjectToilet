@@ -5,13 +5,7 @@
   overflow: hidden;
 }
 
-/*----LOGO----*/
-.logo{
-  text-align: center;
-  display: block;
-  margin: 0;
-  padding-top: 50px;
-}
+
 
 
 
@@ -20,18 +14,16 @@
 .hamburger {
   position: absolute;
   box-sizing: border-box;
-  left: 0;
-  top: 0;
-  width: 60px;
-  padding: 16px 16px 10px 16px;
+  left: 1.5%;
+  top: 1.5%;
+  width: 45px;
+  height: 45px;
+  padding: 10px 10px 10px 10px;
   cursor: pointer;
   background-color: rgba(255,255,255,0.85);
-  border-radius: 0 0 0 0;
+  border-radius: 5px;
   transition: 0.5s ease left;
-  border-bottom: 1px solid #333;
-  border-left: 1px solid #333;
-  border-right: 1px solid #333;
-  border-top: 1px solid #333;
+  border: 2px solid rgba(0,0,0,0.25);
   z-index: 11;
   -webkit-user-select: none;
   /* Chrome all / Safari all */
@@ -47,7 +39,8 @@
 }
 
 .hamburger-active .hamburger {
-  left: 240px;
+  left: 245px;
+  top: 2.5%;
 }
 
 .hamburger-active span.hamurger-second {
@@ -64,7 +57,7 @@
 
 .hamburger span {
   display: block;
-  background-color: black;
+  background-color: rgba(0,0,0,0.5);
   width: 100%;
   border-radius: 2px;
   height: 4px;
@@ -76,10 +69,14 @@
   box-sizing: border-box;
   color: #;
   background-color: rgba(255,255,255,0.85);
-  height: 100%;
+  border-radius: 0 5px 5px 0;
+  border-top: 2px solid rgba(0,0,0,0.25);
+  border-right: 2px solid rgba(0,0,0,0.25);
+  border-bottom: 2px solid rgba(0,0,0,0.25);
+  height: 97%;
   position: absolute;
   left: -300px;
-  top: 0;
+  top: 1.5%;
   width: 300px;
   overflow: auto;
   transition: 0.5s ease left;
@@ -105,6 +102,7 @@
   text-transform: ;
   text-align: ;
   padding: 24px;
+  border-radius: 5px;
   border-bottom: 1px solid #333;
   letter-spacing: 4px;
   font-weight: bold;
@@ -218,4 +216,13 @@
 
 .delay1 {
   transition-delay: 1s;
+}
+
+
+/*----LOGO----*/
+.logo{
+  text-align: center;
+  display: block;
+  margin: 0;
+  padding: 0;
 }

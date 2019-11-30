@@ -23,6 +23,18 @@ app.get('/alletoiletten', function(req, res){
   });
 });
 
+app.get('/aboutus', function(req, res){
+  res.render('overons', {
+    toiletten: data
+  });
+});
+
+app.get('/disclaimers', function(req, res){
+  res.render('disclaimer', {
+    toiletten: data
+  });
+});
+
 app.listen(port);
 
 
