@@ -17,6 +17,12 @@ app.get('/', function(req, res){
   });
 });
 
+app.get('/alletoiletten', function(req, res){
+  res.render('toiletten', {
+    toiletten: data
+  });
+});
+
 app.listen(port);
 
 
