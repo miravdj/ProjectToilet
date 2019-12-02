@@ -35,7 +35,9 @@ app.get('/disclaimers', function(req, res){
   });
 });
 
-app.listen(port);
+app.listen(3000, function(){
+  console.log('Node luistert op poort 3000')
+  });
 
 
 request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek1/MapServer/8/query?where=1%3D1&outFields=OBJECTID,OBDD,CATEGORIE,PUBLICEREN,OMSCHRIJVING,EXTRA_INFO_PUBLIEK,VRIJSTAAND,TYPE,STADSEIGENDOM,BETALEND,STRAAT,HUISNUMMER,POSTCODE,DISTRICT,BEHEERDER,CONTACTPERSOON,CONTACTGEGEVENS,INTEGRAAL_TOEGANKELIJK,LUIERTAFEL,Y_COORD,ID,X_COORD,OPENINGSUREN_OPM&outSR=4326&f=json',
