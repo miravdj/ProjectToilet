@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "isotope-layout": "^3.0.6",
     "leaflet-routing-machine": "^3.2.12",
+    "nominatim-search": "^1.0.2",
     "request": "^2.88.0"
   }
 }
