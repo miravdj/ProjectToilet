@@ -22,7 +22,7 @@ const toiletplaats = L.icon({
 //icon locatieicoon
 const locatieicoon = L.icon({
     iconUrl: 'img/locatieicoon.png',
-    iconSize: [38, 50],
+    iconSize: [58, 70],
     iconAnchor: [22, 34],
     popupAnchor: [-3, -76],
 });
