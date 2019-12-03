@@ -25,7 +25,7 @@
     
     marker = new L.marker([<%=toiletten[i].geometry.y%>, <%=toiletten[i].geometry.x%>], {
         icon: toiletimg
-      }).bindPopup("<h1>Toilet <%=toiletten[i].attributes.OMSCHRIJVING%></h1><h2 class='<%=toiletten[i].attributes.BETALEND%>'> Betalend:  <%=toiletten[i].attributes.BETALEND%> </h2><p><%=toiletten[i].attributes.STRAAT%> <%=toiletten[i].attributes.HUISNUMMER%><br><%=toiletten[i].attributes.POSTCODE%> <%=toiletten[i].attributes.DISTRICT%><br></p> <a href='https:www.google.com/maps/dir/?api=1&dir_action=navigate&origin='<%=toiletten[i].geometry.y%>',' <%=toiletten[i].geometry.x%>'>test<a>").addTo(map);
+      }).bindPopup("<h1>Toilet <%=toiletten[i].attributes.OMSCHRIJVING%></h1><h2 class='<%=toiletten[i].attributes.BETALEND%>'> Betalend:  <%=toiletten[i].attributes.BETALEND%> </h2><p><%=toiletten[i].attributes.STRAAT%> <%=toiletten[i].attributes.HUISNUMMER%><br><%=toiletten[i].attributes.POSTCODE%> <%=toiletten[i].attributes.DISTRICT%><br></p> <a href='https:www.google.com/maps/dir/?api=1&dir_action=navigate&origin='<%=toiletten[i].geometry.y%>',' <%=toiletten[i].geometry.x%>'>test<a><br><br><div class='rating'><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span></div>").addTo(map);
 
     //layergroup (Dit is wat sven schreef als al een onderdeel van de layergroup)
     if ("<%=toiletten[i]%>") {

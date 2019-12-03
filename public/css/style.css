@@ -29,11 +29,9 @@ main {
 .leaflet-marker-icon,
 .leaflet-marker-shadow{
   background-image: url(/img/locatieicoon.png);
-
 }
 
 #map{
-
   z-index: 10;
 }
 #map.hamburger-active-onmap{
@@ -43,7 +41,7 @@ main {
 
 /*--- template ---*/
 .template{
-  background-color: ;
+  background-color:#EBD8D3;
   padding: 50px 25px 25px 25px;
   margin: 0px auto 0px auto;
 }
@@ -87,8 +85,26 @@ p{
 .centerText{
   text-align: center;
 }
+
 /*--- Einde Tekst ---*/
 
+/*--- ratings ---*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+/*--- einde ratings ---*/
 
 
 /*--- Footer ---*/
