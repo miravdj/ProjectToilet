@@ -5,6 +5,11 @@ const app = express();
 const port = 3000;
 
 var data;
+let port = process.env.PORT;
+if(port== null || port ==""){
+port=3000;
+
+}
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'views'));
@@ -35,7 +40,7 @@ app.get('/disclaimers', function(req, res){
   });
 });
 
-app.listen(3000, function(){
+app.listen(port, function(){
   console.log('Node luistert op poort 3000')
   });
 
