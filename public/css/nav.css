@@ -12,7 +12,7 @@
 /*----HAMBURGER SIDE----*/
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   box-sizing: border-box;
   left: 1.5%;
   top: 1.5%;
@@ -74,7 +74,7 @@
   border-right: 2px solid rgba(0,0,0,0.25);
   border-bottom: 2px solid rgba(0,0,0,0.25);
   height: 97%;
-  position: absolute;
+  position: fixed;
   left: -300px;
   top: 1.5%;
   width: 300px;
