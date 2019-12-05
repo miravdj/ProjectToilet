@@ -2,13 +2,12 @@ const express = require ('express');
 const path = require('path');
 const request = require('request');
 const app = express();
-const port = 3000;
+
 
 var data;
 let port = process.env.PORT;
-if(port== null || port ==""){
-port=3000;
-
+if(port == null || port == ""){
+  port = 3000;
 }
 
 app.set('view engine', 'ejs');
